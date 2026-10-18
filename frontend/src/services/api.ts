@@ -9,7 +9,7 @@ import {
   AnalyticsSummary
 } from '../types';
 
-export const BACKEND_URL = (import.meta.env.VITE_API_URL as string | undefined) || '';
+export const BACKEND_URL = ((import.meta as any).env?.VITE_API_URL as string | undefined) || '';
 const API_BASE = `${BACKEND_URL}/api`;
 
 export async function checkHealth(): Promise<any> {
