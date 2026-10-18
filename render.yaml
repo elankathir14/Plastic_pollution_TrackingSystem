@@ -1,17 +1,14 @@
 # ======================================================================
 # AQUATRACE AI - RENDER BLUEPRINT SPECIFICATION (render.yaml)
-# Deploy both Backend (Docker Web Service) and Frontend (Static Site)
+# All-in-One Web Service: React UI + FastAPI Backend + YOLOv8 + SQLite
 # ======================================================================
 
 services:
-  # --------------------------------------------------------------------
-  # 1. BACKEND SERVICE: FastAPI + YOLOv8 + SQLite (Docker Web Service)
-  # --------------------------------------------------------------------
   - type: web
-    name: aquatrace-backend
+    name: aquatrace-ai
     runtime: docker
     dockerfilePath: ./Dockerfile
-    plan: starter  # Starter ($7/mo with 1GB RAM) or free (512MB)
+    plan: free
     region: oregon
     healthCheckPath: /api/health
     disk:
@@ -31,23 +28,3 @@ services:
         value: "0.28"
       - key: USE_ENVIRONMENTAL_FALLBACK
         value: "true"
-
-  # --------------------------------------------------------------------
-  # 2. FRONTEND SERVICE: React + Vite + Leaflet (100% Free Static Site)
-  # --------------------------------------------------------------------
-  - type: web
-    name: aquatrace-frontend
-    runtime: static
-    rootDir: frontend
-    buildCommand: npm install && npm run build
-    staticPublishPath: dist
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
-    envVars:
-      - key: VITE_API_URL
-        fromService:
-          type: web
-          name: aquatrace-backend
-          property: host
