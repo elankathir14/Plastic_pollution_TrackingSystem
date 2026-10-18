@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Vite & Frontend build
+frontend/dist/
+frontend/.vite/
+
+# Database & Uploads
+*.db
+*.sqlite
+*.sqlite3
+uploads/
+!uploads/.gitkeep
+uploads/annotated/
+!uploads/annotated/.gitkeep
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ML Weights
+*.pt
+*.onnx
+*.engine
+ml/models/*.pt
+!ml/models/.gitkeep

@@ -1,0 +1,82 @@
+{
+  "taxonomy_version": "1.0",
+  "classes": {
+    "plastic_bottle": {
+      "display_name": "Plastic Bottle (PET)",
+      "display_name_ta": "நெகிழி பாட்டில் (PET)",
+      "category": "rigid_plastic",
+      "hazard_level": "medium",
+      "hazard_weight": 1.2,
+      "decomposition_years": 450,
+      "color_hex": "#06b6d4",
+      "coco_mapping": ["bottle"],
+      "description": "Polyethylene terephthalate beverage containers prone to UV fragmentation into microplastics."
+    },
+    "plastic_bag": {
+      "display_name": "Plastic Bag / Soft Film",
+      "display_name_ta": "நெகிழி பை / மெல்லிய உறை",
+      "category": "film_plastic",
+      "hazard_level": "high",
+      "hazard_weight": 1.6,
+      "decomposition_years": 20,
+      "color_hex": "#ec4899",
+      "coco_mapping": ["backpack", "handbag", "suitcase"],
+      "description": "High strangulation and ingestion hazard for sea turtles and marine megafauna."
+    },
+    "food_container": {
+      "display_name": "Food Container / Styrofoam",
+      "display_name_ta": "உணவுப் பெட்டி / தெர்மாகோல்",
+      "category": "expanded_polystyrene",
+      "hazard_level": "medium",
+      "hazard_weight": 1.3,
+      "decomposition_years": 500,
+      "color_hex": "#f59e0b",
+      "coco_mapping": ["cup", "bowl"],
+      "description": "Takeout containers, cups, and expanded polystyrene easily broken into pellets."
+    },
+    "fishing_gear": {
+      "display_name": "Ghost Net / Fishing Line / Rope",
+      "display_name_ta": "மீன்பிடி வலை / கயிறு",
+      "category": "commercial_fishing",
+      "hazard_level": "critical",
+      "hazard_weight": 2.0,
+      "decomposition_years": 600,
+      "color_hex": "#ef4444",
+      "coco_mapping": ["sports ball", "frisbee", "kite"],
+      "description": "Deadly ghost gear causing continuous marine life entanglements and reef smothering."
+    },
+    "beverage_can": {
+      "display_name": "Metal Beverage Can",
+      "display_name_ta": "உலோக பான கேன்",
+      "category": "metal_debris",
+      "hazard_level": "low",
+      "hazard_weight": 0.8,
+      "decomposition_years": 200,
+      "color_hex": "#8b5cf6",
+      "coco_mapping": [],
+      "description": "Aluminum and tin cans causing physical abrasion and sediment pollution."
+    },
+    "plastic_fragment": {
+      "display_name": "Hard Plastic Fragment",
+      "display_name_ta": "உடைந்த கடின நெகிழி துண்டு",
+      "category": "fragmented_polymer",
+      "hazard_level": "high",
+      "hazard_weight": 1.5,
+      "decomposition_years": 400,
+      "color_hex": "#14b8a6",
+      "coco_mapping": [],
+      "description": "Weathered, unidentifiable plastic fragments actively breaking down into microplastics."
+    },
+    "other_marine_litter": {
+      "display_name": "Other Coastal Litter",
+      "display_name_ta": "பிற கடல் குப்பைகள்",
+      "category": "general_litter",
+      "hazard_level": "medium",
+      "hazard_weight": 1.0,
+      "decomposition_years": 100,
+      "color_hex": "#64748b",
+      "coco_mapping": [],
+      "description": "Miscellaneous marine and shoreline debris."
+    }
+  }
+}
