@@ -23,6 +23,11 @@ async def lifespan(app: FastAPI):
     # Startup: Initialize SQLite schema and ensure upload directories
     logger.info("Initializing database schema...")
     init_db()
+    try:
+        from app.database.seed_data import seed_sample_data
+        seed_sample_data()
+    except Exception as e:
+        logger.warning(f"Seed data initialization: {e}")
     logger.info("Database initialized successfully.")
     yield
     logger.info("Application shutting down.")

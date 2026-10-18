@@ -37,10 +37,7 @@ RUN mkdir -p /app/uploads/annotated /app/ml/models
 
 WORKDIR /app/backend
 
-# Initialize SQLite schema and seed coastal monitoring records
-RUN python -c "import sys; sys.path.insert(0, '.'); from app.database.seed_data import seed_sample_data; seed_sample_data()"
-
 EXPOSE 8000
 
-# Start FastAPI server on dynamic cloud port
+# Start FastAPI server on dynamic cloud port (FastAPI lifespan automatically initializes and seeds DB)
 CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}"]
